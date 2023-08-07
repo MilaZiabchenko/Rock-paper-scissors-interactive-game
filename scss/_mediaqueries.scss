@@ -1,0 +1,54 @@
+@media (max-width: 1350px) {
+  .score {
+    width: 55%;
+  }
+}
+
+@media (max-width: 780px) {
+  .score {
+    width: 90%;
+    margin-top: 0;
+    & p {
+      font-size: 2rem;
+    }
+  }
+
+  .game-items {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    & * {
+      grid-column: span 2;
+    }
+
+    .scissors-game-item {
+      grid-column: 2/4;
+    }
+  }
+
+  img {
+    width: 120px;
+    height: 120px;
+    margin: 0.5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .score {
+    width: 100%;
+    & p {
+      font-size: 1.8rem;
+    }
+  }
+
+  .game-items {
+    grid-template-columns: 1fr;
+
+    .scissors-game-item {
+      grid-column: span 2;
+    }
+  }
+}

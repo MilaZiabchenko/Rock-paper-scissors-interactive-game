@@ -1,71 +1,92 @@
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background: $light-color;
+  border-radius: 100vw;
+  margin-block: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $secondary-color;
+  border: 0.2rem solid $light-color;
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(155, 100%, 50%);
+}
+
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-	font-family: $font-stack-two;
-	background: $background-image;
-	height: 100vh;
-	padding: 3rem;
+  font-family: $font-stack-two;
+  background: $background-image;
+  height: 100vh;
+  padding: 2rem;
 }
 
 .flex {
-	@include flex;
+  @include flex;
 }
 
 .game-items {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	column-gap: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 3rem;
 }
 
 .score {
-	display: flex;
-	justify-content: space-between;
-	width: 70%;
-	margin: 1rem auto;
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
+  margin: 2rem auto;
 
-	p:first-child {
-		color: $light-color;
-	}
+  p:first-child {
+    color: $light-color;
+  }
 
-	p:last-child {
-		color: $dark-color;
-	}
+  p:last-child {
+    color: $dark-color;
+  }
 }
 
 p {
-	font-family: $font-stack-one;
+  font-family: $font-stack-one;
 }
 
 img {
-	display: block;
-	width: 150px;
-	height: 150px;
-	margin: 2rem;
-	transition: transform 250ms ease-in-out;
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 2rem;
+  transition: transform 250ms ease-in-out;
 }
 
 img:hover {
-	transform: translateY(-15px);
+  transform: translateY(-15px);
 }
 
 button {
-	@include button-style($light-color, $primary-color);
-	transition-duration: 150ms;
+  @include button-style($light-color, $primary-color);
+  transition-duration: 150ms;
 }
 
 button:hover {
-	background:  hsl(205, 100%, 55%);
+  background: hsl(205, 100%, 55%);
 }
 
 .reset {
-	@include button-style($dark-color, $secondary-color);
-	display: none;
+  @include button-style($dark-color, $secondary-color);
+  @include button-style($dark-color, hsl(155, 100%, 50%));
+  display: none;
 }
 
 .reset:hover {
-	background: hsl(155, 100%, 50%);
+  background: $secondary-color;
 }

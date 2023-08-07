@@ -1,65 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="description"
-			content="Game"
-		/>
-		<meta
-			name="keywords"
-			content="game, rock, paper, scissors"
-		/>
-		<meta name="author" content="Mila Ziabchenko" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0, user-scalable=0"
-		/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Game" />
+    <meta name="keywords" content="game, rock, paper, scissors" />
+    <meta name="author" content="Mila Ziabchenko" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0"
+    />
 
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Fresca&family=Hind:wght@300;400;600;700&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="css/style.css" />
-		<script src="js/main.js" defer></script>
-		<script src="js/functions.js" defer></script>
-		<script src="js/eventlisteners.js" defer></script>
-		<title>Rock Paper Scissors</title>
-	</head>
-	<body class="flex">
-		<div class="flex">
-			<p class="rules">Rock beats scissors</p>
-			<p class="rules">Paper beats rock</p>
-			<p class="rules">Scissors beats paper</p>
-			<br />
-			<p class="rules">And we play up to 3 wins...</p>
-			<h1 class="heading">Let's play!</h1>
-		</div>
-		<button type="reset" id="reset" class="reset">Reset</button>
-		<div id="score" class="score">
-			<p>Computer: 0</p>
-			<p>You: 0</p>
-		</div>
-		<div class="game-items">
-			<div class="flex">
-				<img src="img/rock.svg" alt="Rock" />
-				<button type="button" id="rock" class="choice">Rock</button>
-			</div>
-			<div class="flex">
-				<img src="img/paper.svg" alt="Paper" />
-				<button type="button" id="paper" class="choice">Paper</button>
-			</div>
-			<div class="flex">
-				<img src="img/scissors.svg" alt="Scissors" />
-				<button type="button" id="scissors" class="choice">
-					Scissors
-				</button>
-			</div>
-		</div>
-		<div class="modal">
-			<div id="result" class="modal-content flex"></div>
-		</div>
-	</body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fresca&family=Hind:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/index.js" defer></script>
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body class="flex">
+    <div class="flex">
+      <p class="rules">Rock beats scissors</p>
+      <p class="rules">Paper beats rock</p>
+      <p class="rules">Scissors beats paper</p>
+      <br />
+      <p class="rules">And we play up to 3 wins...</p>
+      <h1 class="heading">Let's play!</h1>
+    </div>
+    <button type="reset" id="reset" class="reset">Reset</button>
+    <div id="score" class="score">
+      <p>Computer: 0</p>
+      <p>You: 0</p>
+    </div>
+    <div class="game-items">
+      <div class="flex">
+        <img src="img/rock.svg" alt="Rock" />
+        <button type="button" id="rock" class="choice">Rock</button>
+      </div>
+      <div class="flex">
+        <img src="img/paper.svg" alt="Paper" />
+        <button type="button" id="paper" class="choice">Paper</button>
+      </div>
+      <div class="scissors-game-item flex">
+        <img src="img/scissors.svg" alt="Scissors" />
+        <button type="button" id="scissors" class="choice">Scissors</button>
+      </div>
+    </div>
+    <div id="modal" class="modal">
+      <div id="result" class="modal-content flex"></div>
+    </div>
+  </body>
 </html>
